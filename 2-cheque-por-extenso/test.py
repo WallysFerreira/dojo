@@ -17,7 +17,7 @@ class Test(TestCase):
     def teste_centena(self):
         self.assertEqual(cheque(100), "cem")
         self.assertEqual(cheque(153), "cento e cinquenta e tres")
-        self.assertEqual(cheque(644), "seiscentos e quarenta e quatro")
+        self.assertEqual(cheque(640), "seiscentos e quarenta")
 
 if __name__ == '__main__':
     unittest.main()

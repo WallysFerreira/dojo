@@ -23,3 +23,4 @@ def cheque(num):
     elif (len(numString) == 3):
         if (num == 100):
             return centena[0]
+        elif
