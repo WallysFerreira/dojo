@@ -2,6 +2,7 @@ def cheque(num):
 	unidade = ["um", "dois", "tres", "quatro", "cinco", "seis", "sete", "oito", "nove"]
 	dezenaDoDez = ["dez", "onze", "doze", "treze", "quatorze", "quinze", "dezesseis", "dezessete", "dezoito", "dezenove"]
 	dezena = ["vinte", "trinta", "quarenta", "cinquenta", "sessenta", "setenta", "oitenta", "noventa"]
+    
 	
 	numString = str(num)
 

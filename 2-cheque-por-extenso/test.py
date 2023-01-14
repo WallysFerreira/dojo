@@ -14,6 +14,11 @@ class Test(TestCase):
 	def teste_dezena(self):
 		self.assertEqual(cheque(60), "sessenta")
 		self.assertEqual(cheque(37), "trinta e sete")
+
+    def teste_centena(self):
+        self.assertEqual(cheque(100), "cem")
+        self.assertEqual(cheque(153), "cento e cinquenta e tres")
+        self.assertEqual(cheque(644), "seiscentos e quarenta e quatro")
 		
 if __name__ == '__main__':
 	unittest.main()
