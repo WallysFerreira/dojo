@@ -23,4 +23,15 @@ def cheque(num):
     elif (len(numString) == 3):
         if (num == 100):
             return centena[0]
-        elif
+        elif (numString[2] == '0'):
+            index1 = int(numString[0])
+            index2 = int(numString[1])
+
+            return centena[index1] + " e " + dezena[index2 - 2]
+        else:
+            index1 = int(numString[0])
+            index2 = int(numString[1])
+            index3 = int(numString[2])
+            
+            return centena[index1] + " e " + dezena[index2 - 2] + " e " + unidade[index3 - 1]
+           
