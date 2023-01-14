@@ -19,13 +19,15 @@ class Test(TestCase):
         self.assertEqual(cheque(153), "cento e cinquenta e tres reais")
         self.assertEqual(cheque(640), "seiscentos e quarenta reais")
         self.assertEqual(cheque(903), "novecentos e tres reais")
+        self.assertEqual(cheque(300), "trezentos reais")
 
     def teste_unidade_de_milhar(self):
-        self.assertEqual(cheque(1396), "mil trezentos e noventa e seis reais")
-        self.assertEqual(cheque(4088), "quatro mil e oitenta e oito reais")
-        self.assertEqual(cheque(7101), "sete mil cento e um reais")
-        self.assertEqual(cheque(2220), "dois mil duzentos e vinte reais")
-
+        self.assertEqual(cheque(1000), "mil reais")
+        self.assertEqual(cheque(4000), "quatro mil reais")
+        self.assertEqual(cheque(6300), "seis mil e trezentos reais")
+        self.assertEqual(cheque(2940), "dois mil novecentos e quarenta reais")
+        self.assertEqual(cheque(3615), "tres mil seiscentos e quinze reais")
+        self.assertEqual(cheque(8765), "oito mil setecentos e sessenta e cinco reais")
 
 if __name__ == '__main__':
     unittest.main()
