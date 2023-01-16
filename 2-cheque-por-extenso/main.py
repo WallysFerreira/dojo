@@ -16,11 +16,11 @@ def cheque(num):
             return dezenaDoDez[num - 10] + " reais"
         else:
             if (numString[1] == "0"):
-                index = int(numString[0])
-                return dezena[index - 2] + " reais"
+                indexDez = int(numString[0])
+                return dezena[indexDez - 2] + " reais"
             else:
-                index1 = int(numString[0])
-                index2 = int(numString[1])
+                indexDez = int(numString[0])
+                indexUni = int(numString[1])
 
                 return dezena[index1 - 2] + " e " + unidade[index2 - 1] + " reais"
 
@@ -31,21 +31,21 @@ def cheque(num):
         elif (numString[1] == '0' and numString[2] == '0'):
             return centena[int(numString[0])] + " reais"
         elif (numString[2] == '0'):
-            index1 = int(numString[0])
-            index2 = int(numString[1])
+            indexCen = int(numString[0])
+            indexDez = int(numString[1])
 
-            return centena[index1] + " e " + dezena[index2 - 2] + " reais"
+            return centena[indexCen] + " e " + dezena[indexDez - 2] + " reais"
         elif (numString[1] == '0'):
-            index1 = int(numString[0])
-            index2 = int(numString[2])
+            indexCen = int(numString[0])
+            indexUni = int(numString[2])
 
-            return centena[index1] + " e " + unidade[index2 - 1] + " reais"        
+            return centena[indexCen] + " e " + unidade[indexUni - 1] + " reais"        
         else:
-            index1 = int(numString[0])
-            index2 = int(numString[1])
-            index3 = int(numString[2])
+            indexCen = int(numString[0])
+            indexDez = int(numString[1])
+            indexUni = int(numString[2])
             
-            return centena[index1] + " e " + dezena[index2 - 2] + " e " + unidade[index3 - 1] + " reais"
+            return centena[indexCen] + " e " + dezena[indexDez - 2] + " e " + unidade[indexUni - 1] + " reais"
            
     # Unidade de milhar (ex: 7130)
     elif (len(numString) == 4):
