@@ -78,5 +78,7 @@ def cheque(num):
             
             if (indexDez == 1):
                 return unidade[indexUniMil - 1] + " mil " + centena[indexCen] + " e " + dezenaDoDez[indexUni] + " reais"
-            else:
+            elif (indexUni == 0):
                 return unidade[indexUniMil - 1] + " mil " + centena[indexCen] + " e " + dezena[indexDez - 2] + " reais"
+            else:
+                return unidade[indexUniMil - 1] + " mil " + centena[indexCen] + " e " + dezena[indexDez - 2] + " e " + unidade[indexUni - 1] + " reais"
