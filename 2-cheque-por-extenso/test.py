@@ -30,7 +30,8 @@ class Test(TestCase):
         self.assertEqual(cheque(8765), "oito mil setecentos e sessenta e cinco reais")
     
     def teste_centavos(self):
-        self.assertEqual(cheque(10.03), "dez reais e trinta e três centavos")
+        self.assertEqual(cheque(1.03), "um reais e tres centavos")
+        self.assertEqual(cheque(1.13), "um reais e treze centavos")
 
 if __name__ == '__main__':
     unittest.main()

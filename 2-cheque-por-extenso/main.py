@@ -1,14 +1,26 @@
-def cheque(num):
+def cheque(numero):
     unidade = ["um", "dois", "tres", "quatro", "cinco", "seis", "sete", "oito", "nove"]
     dezenaDoDez = ["dez", "onze", "doze", "treze", "quatorze", "quinze", "dezesseis", "dezessete", "dezoito", "dezenove"]
     dezena = ["vinte", "trinta", "quarenta", "cinquenta", "sessenta", "setenta", "oitenta", "noventa"]
     centena = ["cem", "cento", "duzentos", "trezentos", "quatrocentos", "quinhentos", "seiscentos", "setecentos", "oitocentos", "novecentos"]
 
+    num = int(numero // 1)
     numString = str(num)
+    decString = str(dec)
+    dec = numero % 1 
+    indexDezDec = decString[2]
+    indexUniDec = decString[3]
 
     # Unidade (ex: 3)
     if (len(numString) == 1):
-        return unidade[num - 1] + " reais"
+        if (dec):
+            if (int(indexDezDec) != 0):
+                if (int(indexDezDec) == 1):
+                    return unidade[num - 1] + " reais e " + dezenaDoDez[int(indexUniDec) + 1] + " centavos"
+            else:
+                return unidade[num - 1] + " reais e " + unidade[int(indexUniDec) - 1] + " centavos"
+        else:
+            return unidade[num - 1] + " reais"
 
     # Dezena (ex: 65)
     elif (len(numString) == 2):
@@ -22,7 +34,7 @@ def cheque(num):
                 indexDez = int(numString[0])
                 indexUni = int(numString[1])
 
-                return dezena[index1 - 2] + " e " + unidade[index2 - 1] + " reais"
+                return dezena[indexDez - 2] + " e " + unidade[indexUni - 1] + " reais"
 
     # Centena (ex: 432)
     elif (len(numString) == 3):
